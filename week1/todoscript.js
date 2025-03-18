@@ -8,6 +8,19 @@ function addTodo() {
             <button class = "done-btn" onclick="completeTodo(this)">완료</button>`;
 
             todoList.appendChild(li);
-            input.value="";
+            input.value=""; // 입력창 초기화화
     }
+}
+
+function completeTodo (button) {
+    let donelist = document.getElementById("done-list");
+    let li= button.parentElement;
+    li.removeChild(button);
+
+    donelist.appendChild(li);
+}
+
+function removeTodo(button) {
+    let li=button.parentElement;
+    li.remove();
 }
