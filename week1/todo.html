@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta chatset="UTF-8">
+        <title>TO-DO List</title>
+    </head>
+    <style>
+        .container {
+            width:350px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: 
+            "box1 box1"
+            "box2 box3";
+            justify-content: center; /* 전체 컨테이너 가운데 정렬 */
+            align-items: center; /* 세로 정렬 */
+            text-align: center;
+            width: 80%; /* 컨테이너 너비 조정 */
+            margin: 0 auto; /* 중앙 배치 */
+        }
+
+        .inputcontainer {
+            grid-area:box1;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            gap:10px;
+
+        }
+        .todo {
+            grid-area:box2;
+        }
+        .done {
+            grid-area:box3;
+        }
+        .greenbutton {
+            padding: 10px 15px;
+            font-size:16px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            background-color:green;
+            color:white;
+        }
+
+        input {
+            width: 300px; /* 입력창 너비 */
+            height: 20px; /* 입력창 높이 */
+            font-size: 16px;
+            padding: 10px; /* 내부 여백 */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none; 
+                }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="inputcontainer">
+                <h1 style="text-align:center;">GYK TODO</h1>
+                <div>
+                    <input type="text" id="todo-input" placeholder="할 일 입력">
+                    <button onclick="addTodo()" class="greenbutton">할 일 추가</button>
+                </div>
+            </div>
+            
+            <div class="todo">
+                <h3 style="text-align:center;">할 일</h3>
+                <ul id="todo-list"></ul>
+            </div>
+
+            <div class="done">
+                <h3 style="text-align:center;">완료</h3>
+                <ul id="done-list"></ul>
+            </div>
+    </div>
+
+    
+
+    </body>
+</html>
