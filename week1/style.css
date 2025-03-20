@@ -1,14 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+    margin: 0;
+}
+
+
 .container {
-    width:350px;
+    background-color:white;
+    border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
     grid-template-areas: 
     "box1 box1"
-    "box2 box3";
+    "box2 box3"
+    "box4 box5";
     justify-content: center; /* 전체 컨테이너 가운데 정렬 */
-    align-items: center; /* 세로 정렬 */
+    box-align: center;
     text-align: center;
-    width: 80%; /* 컨테이너 너비 조정 */
+    width: 50%; /* 컨테이너 너비 조정 */
     margin: 0 auto; /* 중앙 배치 */
 }
 
@@ -20,11 +32,35 @@
     gap:10px;
 
 }
-.todo {
+
+.todo, .done {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    min-height:200px;
+    flex-grow:1;
+    border-radius:5px;
+    padding:10px;
+    overflow: hidden; /* 내부 요소가 넘치지 않도록 설정 */
+    margin:auto;
+
+}
+
+.todo_text {
     grid-area:box2;
+    text-align: center;
+}
+
+.done_text {
+    grid-area:box3;
+    text-align: center;
+}
+.todo {
+    grid-area:box4;
+    
 }
 .done {
-    grid-area:box3;
+    grid-area:box5;
 }
 .greenbutton {
     padding: 10px 15px;
@@ -34,7 +70,14 @@
     cursor:pointer;
     background-color:green;
     color:white;
+    transition: background-color 0.3s ease;
 }
+
+.greenbutton:hover {
+    background-color: #205f2e;
+}
+
+
 
 input {
     width: 300px; /* 입력창 너비 */
@@ -44,4 +87,44 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none; 
-        }
+    }
+
+    ul {
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        padding:10px;
+        margin: 0 auto;
+        width:90%;
+    }
+
+    li {
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+.list {
+    list-style-type: none;
+    font-size:16px;
+    padding:7px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background-color:white;
+}
+
+.redbutton {
+    padding: 10px 15px;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background-color:red;
+    color:white;
+    transition: background-color 0.3s ease;
+
+}
+
+.redbutton:hover {
+    background-color: #750808;
+}

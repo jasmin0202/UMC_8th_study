@@ -4,10 +4,10 @@
         <meta chatset="UTF-8">
         <title>TO-DO List</title>
         <link rel="stylesheet" href="style.css">
-        <script src="todoscript.js"></script>
+        <script src="./dist/todoscript.js" defer></script>
     </head>
 
-    <body>
+    <body style="background-color: #d0e8eb;">
         <div class="container">
             <div class="inputcontainer">
                 <h1 style="text-align:center;">GYK TODO</h1>
@@ -16,14 +16,17 @@
                     <button onclick="addTodo()" class="greenbutton">할 일 추가</button>
                 </div>
             </div>
-            
+                
+            <h3 class="todo_text">할 일</h3>
+
             <div class="todo">
-                <h3 style="text-align:center;">할 일</h3>
                 <ul id="todo-list"></ul>
             </div>
 
+            <h3 class="done_text">완료</h3>
+
             <div class="done">
-                <h3 style="text-align:center;">완료</h3>
+                
                 <ul id="done-list"></ul>
             </div>
     </div>
