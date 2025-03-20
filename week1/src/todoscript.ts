@@ -13,7 +13,7 @@ function addTodo(): void {
         completeButton.innerText = "완료";
 
         // 완료 버튼 클릭 시 completeTodo 실행
-        completeButton.addEventListener("click", () => completeTodo(li));
+        completeButton.addEventListener("click", () => completeTodo(li)); // 익명 함수를 사용
 
         li.appendChild(completeButton);
         todoList.appendChild(li);
