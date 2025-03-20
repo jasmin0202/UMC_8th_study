@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color:white;
+            justify-content: center;
+            text-align: center;
+            
+            
+        }
+
+        .ceiling {
+            display:flex;
+            flex-direction: row;
+            height:80px;
+        }
+
+        .header, .menu, .hero, .main, .image, .extra, .banner {
+            display: flex;
+            justify-content: center;  /* 가로 중앙 정렬 */
+            align-items: center;  /* 세로 중앙 정렬 */
+        }
+
+        .header {
+            background-color:black;
+            padding:10px;
+            flex-grow: 1;
+        }
+
+        .menu {
+            background-color: red;
+            padding:10px;
+            flex-grow:3;
+        }
+
+        .hero {
+            background-color: #32a0c2;
+            width: 100vm;
+            height:300px;
+        }
+
+        .middle {
+            display: grid;
+            height: 300px;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: 
+            "main main . image"
+            "main main . extra";
+        }
+
+        .main {
+            background-color: #122d5f;
+           grid-area: main;
+           
+           
+        }
+
+        .image {
+            background-color: #a9d5e2;
+            color:black;
+            grid-area: image;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+
+        .extra {
+            background-color: #30af70;
+            color:black;
+            grid-area: extra;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+
+        .banner {
+            background-color: #ebb523;
+            color: black;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            height:60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ceiling">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+    </div>
+
+    <div class="hero">HERO</div>
+
+    <div class="middle">
+        <main class="main">MAIN</main>
+        <p class="image">IMAGE</p>
+    <p class="extra">EXTRA</p>
+    </div>
+
+    <p class="banner">BANNER</p>
+    
+</body>
+</html>
