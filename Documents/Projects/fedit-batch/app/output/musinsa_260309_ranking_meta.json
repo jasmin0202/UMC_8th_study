@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "crawl_summary": {
+      "queried_keywords": 371,
+      "resolved_keywords": 361,
+      "error": null
+    },
+    "matched_count": 400,
+    "new_items_included_with_zero_last_month": 400,
+    "prev_search_from_snapshot": 0,
+    "prev_search_missing_zero": 0,
+    "current_search_from_csv": 0,
+    "current_search_from_crawl": 1,
+    "current_search_missing": 399,
+    "previous_snapshot_path": null
+  },
+  "warnings": [
+    "현재 파일에 검색량 컬럼이 없어 크롤링 fallback 사용",
+    "이전 snapshot이 없어 전체 상품을 신규로 처리함",
+    "현재 파일에서 중복 key(brand+product_name) 24건 발견",
+    "신규 상품 400개는 지난달 값 0으로 처리하여 포함함",
+    "현재 검색량 1건은 크롤링 fallback 사용",
+    "현재 검색량을 끝내 못 구한 상품 399건 존재"
+  ]
+}
